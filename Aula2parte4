@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(void) {
+    int a, b;
+    float nota1, nota2, nota3;
+    float media;
+    double divisao;
+
+    printf("===== RESUMO NUMERICO =====\n\n");
+
+    // Entrada dos numeros inteiros
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &b);
+
+    // Operacoes matematicas
+    printf("\n===== OPERACOES =====\n");
+
+    printf("Soma: %d\n", a + b);
+    printf("Subtracao: %d\n", a - b);
+    printf("Multiplicacao: %d\n", a * b);
+
+    if (b != 0) {
+        divisao = (double)a / b;
+
+        printf("Divisao: %.2f\n", divisao);
+        printf("Resto: %d\n", a % b);
+    } else {
+        printf("Divisao: impossivel dividir por zero.\n");
+        printf("Resto: impossivel calcular.\n");
+    }
+
+    // Entrada das notas
+    printf("\n===== MEDIA DAS NOTAS =====\n");
+
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+
+    printf("Digite a terceira nota: ");
+    scanf("%f", &nota3);
+
+    // Calculo da media
+    media = (nota1 + nota2 + nota3) / 3.0f;
+
+    printf("\nMedia final: %.2f\n", media);
+
+    printf("\n===== FIM DO PROGRAMA =====\n");
+
+    return 0;
+}
