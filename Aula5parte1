@@ -1,0 +1,116 @@
+Atividade1 
+
+#include <stdio.h>
+
+void mostrarDobro(int numero) {
+    printf("Dobro de %d = %d\n", numero, numero * 2);
+}
+
+void mostrarTriplo(int numero) {
+    printf("Triplo de %d = %d\n", numero, numero * 3);
+}
+
+int main(void) {
+
+    mostrarDobro(10);
+    mostrarDobro(7);
+    mostrarDobro(5);
+
+    mostrarTriplo(10);
+    mostrarTriplo(7);
+    mostrarTriplo(5);
+
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+void mostrarSoma(int a, int b) {
+    printf("%d + %d = %d\n", a, b, a + b);
+}
+
+void mostrarProduto(int a, int b) {
+    printf("%d * %d = %d\n", a, b, a * b);
+}
+
+int main(void) {
+    // Na chamada mostrarSoma(5,3), a=5 e b=3 por posição
+    mostrarSoma(5, 3);
+    mostrarProduto(5, 3);
+
+    mostrarProduto(4, -2); // negativo
+    mostrarProduto(0, 10);  // zero
+
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+int somar(int a, int b) {
+    return a + b; // devolve o resultado, não imprime
+}
+
+int main(void) {
+    int resultado = somar(10, 5);
+    printf("Resultado = %d\n", resultado);
+    printf("%d\n", somar(2, 3)); // imprime 5
+
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+
+double calcularMedia(double n1, double n2) {
+    double media = (n1 + n2) / 2.0;
+    return media;
+}
+
+int main(void) {
+    printf("Media = %.2f\n", calcularMedia(8.0, 6.0)); // 7.0
+    printf("Media = %.2f\n", calcularMedia(8.0, 9.0)); // 8.5 - preserva fração por ser double
+    return 0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+double somar(double a, double b) {
+    return a + b;
+}
+
+double subtrair(double a, double b) {
+    return a - b;
+}
+
+double multiplicar(double a, double b) {
+    return a * b;
+}
+
+double dividir(double a, double b) {
+    return a / b; // a verificação de zero será feita no main
+}
+
+int main(void) {
+    double n1, n2;
+    printf("Digite dois numeros: ");
+    scanf("%lf %lf", &n1, &n2);
+
+    printf("Soma: %.2f\n", somar(n1, n2));
+    printf("Subtracao: %.2f\n", subtrair(n1, n2));
+    printf("Multiplicacao: %.2f\n", multiplicar(n1, n2));
+
+    if (n2 != 0) {
+        printf("Divisao: %.2f\n", dividir(n1, n2));
+    } else {
+        printf("Divisao: impossivel dividir por zero!\n");
+    }
+
+    return 0;
+}
