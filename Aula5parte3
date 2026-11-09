@@ -1,0 +1,150 @@
+Atividade1 
+
+#include <stdio.h>
+
+int somar(int a, int b); // PROTÓTIPO - avisa o compilador que existe
+
+int main(void) {
+    printf("%d\n", somar(2, 3));
+    return 0;
+}
+
+int somar(int a, int b) {
+    return a + b;
+}
+
+Atividade2
+
+int somar(int a, int b);      
+
+int somar(int a, int b) {    
+    return a + b;
+}
+
+resultado = somar(5, 3);   
+
+Atividade3
+
+#include <stdio.h>
+
+void mostrarCabecalho(void);
+void executarMenu(void);
+void mostrarEncerramento(void);
+
+int main(void) {
+    mostrarCabecalho();
+    executarMenu();
+    mostrarEncerramento();
+    return 0;
+}
+
+void mostrarCabecalho(void) {
+    printf("====================\n");
+    printf("   SISTEMA CODING\n");
+    printf("====================\n");
+}
+
+void executarMenu(void) {
+    printf("1 - Somar\n2 - Media\n0 - Sair\n");
+    printf("Menu em execucao...\n");
+}
+
+void mostrarEncerramento(void) {
+    printf("Encerrando sistema.\n");
+}
+
+Atividade4
+
+#include <stdio.h>
+
+int main(void) {
+    double c = 25.0;
+    printf("%.2f C = %.2f F\n", c, celsiusParaFahrenheit(c));
+    return 0;
+}
+
+double celsiusParaFahrenheit(double celsius) { // IMPLEMENTAÇÃO - como faz
+    return celsius * 9.0 / 5.0 + 32.0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+double calcularDesconto(double valor, double percentual);
+
+int main(void) {
+    printf("100 com 10%% = %.2f\n", calcularDesconto(100, 10));
+    printf("500 com 5%% = %.2f\n", calcularDesconto(500, 5));
+    printf("250 com 20%% = %.2f\n", calcularDesconto(250, 20));
+    return 0;
+}
+
+double calcularDesconto(double valor, double percentual) {
+    return valor * percentual / 100.0;
+}
+
+Atividade6
+
+#include <stdio.h>
+
+double celsiusParaFahrenheit(double celsius);
+double fahrenheitParaCelsius(double fahrenheit);
+double kmParaMilhas(double km);
+void mostrarMenu(void);
+
+int main(void) {
+    int opcao;
+    double valor;
+
+    do {
+        mostrarMenu();
+        printf("Opcao: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                printf("Celsius: ");
+                scanf("%lf", &valor);
+                printf("Resultado: %.2f F\n", celsiusParaFahrenheit(valor));
+                break;
+            case 2:
+                printf("Fahrenheit: ");
+                scanf("%lf", &valor);
+                printf("Resultado: %.2f C\n", fahrenheitParaCelsius(valor));
+                break;
+            case 3:
+                printf("KM: ");
+                scanf("%lf", &valor);
+                printf("Resultado: %.2f milhas\n", kmParaMilhas(valor));
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opcao invalida!\n");
+        }
+    } while(opcao != 0);
+
+    return 0;
+}
+
+void mostrarMenu(void) {
+    printf("\n=== CONVERSOES ===\n");
+    printf("1 - C para F\n");
+    printf("2 - F para C\n");
+    printf("3 - KM para Milhas\n");
+    printf("0 - Sair\n");
+}
+
+double celsiusParaFahrenheit(double celsius) {
+    return celsius * 9.0 / 5.0 + 32.0;
+}
+
+double fahrenheitParaCelsius(double fahrenheit) {
+    return (fahrenheit - 32.0) * 5.0 / 9.0;
+}
+
+double kmParaMilhas(double km) {
+    return km * 0.621371;
+}
