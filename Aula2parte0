@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char produto[] = "Caderno";
+    float preco = 19.50;
+
+    printf("=========================\n");
+    printf("\tRECIBO\n");
+    printf("=========================\n");
+
+    printf("Produto:\t%s\n", produto);
+    printf("Preco:\t\tR$ %.2f\n", preco);
+    printf("Mensagem:\t\"Obrigado!\"\n");
+
+    printf("=========================\n");
+
+    return 0;
+}
