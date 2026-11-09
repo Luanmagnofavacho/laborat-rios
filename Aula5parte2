@@ -1,0 +1,126 @@
+Atividade1 
+
+#include <stdio.h>
+
+double calcularMedia(double a, double b, double c) {
+    return (a + b + c) / 3.0;
+}
+
+void mostrarSituacao(double media) {
+    if (media >= 7.0) {
+        printf("Aprovado\n");
+    } else {
+        printf("Reprovado\n");
+    }
+}
+
+int main(void) {
+    double n1, n2, n3;
+
+    printf("Digite 3 notas: ");
+    scanf("%lf %lf %lf", &n1, &n2, &n3);
+
+    double media = calcularMedia(n1, n2, n3); // main só chama
+
+    printf("Media: %.2f\n", media);
+    mostrarSituacao(media);
+
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+void teste(void) {
+    int numero = 10;
+    printf("Dentro da funcao teste: %d\n", numero);
+}
+
+int main(void) {
+
+    teste();
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+int main(void) {
+    int idade = 20;
+
+    if (idade >= 18) {
+        int desconto = 10;
+        printf("Desconto: %d\n", desconto);
+  }
+    for (int i = 0; i < 3; i++) {
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+
+int calcularDobro(int numero) {
+    return numero * 2;
+}
+
+int main(void) {
+    int n = 5;
+    printf("%d\n", calcularDobro(n)); // explícito de onde vem o valor
+    return 0;
+}
+
+#include <stdio.h>
+
+int numeroGlobal; // global
+
+int calcularDobro2(void) {
+    return numeroGlobal * 2; // depende de estado externo, escondido
+}
+
+int main2(void) {
+    numeroGlobal = 5;
+    printf("%d\n", calcularDobro2());
+    return 0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+void dobrar(int x) {
+    x = x * 2;
+    printf("Dentro: %d\n", x); // vai imprimir 10
+}
+
+int main(void) {
+    int numero = 5;
+    dobrar(numero);
+    printf("Fora: %d\n", numero); // continua 5
+  
+    return 0;
+}
+
+Atividade6
+
+#include <stdio.h>
+
+void adicionarUm_errado(int numero) {
+    numero++;
+}
+
+int adicionarUm(int numero) {
+    return numero + 1;
+}
+
+int main(void) {
+    int x = 5;
+    x = adicionarUm(x); // pega o retorno e guarda de volta em x
+    printf("x agora vale: %d\n", x); // 6
+    return 0;
+}
