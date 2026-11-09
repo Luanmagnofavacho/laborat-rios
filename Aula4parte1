@@ -1,0 +1,138 @@
+Atividade1 
+
+#include <stdio.h>
+
+int main() {
+    int contador = 0;      // CONTA quantas vezes algo aconteceu
+    int acumulador = 0;    // ACUMULA um valor
+    int valor;
+
+    for (int i = 0; i < 3; i++) {
+        printf("Digite um valor par: ");
+        scanf("%d", &valor);
+        
+        if (valor % 2 == 0) {
+            contador++; // mais um par encontrado
+            acumulador += valor; // soma o valor
+        }
+    }
+
+    printf("Quantidade de pares: %d\n", contador);
+    printf("Soma dos pares: %d\n", acumulador);
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    int soma = 0; // ACUMULADOR
+
+    printf("Digite N: ");
+    scanf("%d", &N);
+
+    for (int i = 1; i <= N; i++) {
+        soma += i; // acumulador guarda a soma
+        // Para anotar: se N=5
+        // i=1 -> soma=1
+        // i=2 -> soma=3
+        // i=3 -> soma=6
+        // i=4 -> soma=10
+    }
+
+    printf("Soma de 1 ate %d = %d\n", N, soma);
+    // Teste N=5 -> 15
+    // Teste N=10 -> 55
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+int main() {
+    float nota; // variável de entrada
+    float soma = 0; // ACUMULADOR
+    int contador = 0; // CONTADOR
+
+    for (int i = 1; i <= 5; i++) {
+        printf("Digite a nota %d: ", i);
+        scanf("%f", &nota);
+        soma += nota;
+        contador++;
+    }
+
+    float media = soma / contador;
+
+    printf("Soma: %.2f\n", soma);
+    printf("Media das 5 notas: %.2f\n", media);
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+
+int main() {
+    float nota, soma = 0;
+    int quantidade = 0;
+
+    printf("Digite as notas (digite -1 para terminar):\n");
+
+    while (1) {
+        printf("Nota: ");
+        scanf("%f", &nota);
+
+        if (nota == -1) { // sentinela detectada
+            break;
+        }
+
+        soma += nota;
+        quantidade++;
+    }
+
+    if (quantidade > 0) {
+        float media = soma / quantidade;
+        printf("Media: %.2f\n", media);
+    } else {
+        printf("Nenhuma nota digitada.\n");
+    }
+
+    return 0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+int main() {
+    float nota, soma = 0;
+    int quantidade = 0;
+
+    printf("Digite as notas (digite -1 para terminar):\n");
+
+    while (1) {
+        printf("Nota: ");
+        scanf("%f", &nota);
+
+        if (nota == -1) {
+            break;
+        }
+        soma += nota;       // acumulador
+        quantidade++;       // contador
+    }
+
+    if (quantidade > 0) {
+        float media = soma / quantidade;
+        printf("\n--- ESTATISTICAS ---\n");
+        printf("Quantidade de notas: %d\n", quantidade);
+        printf("Soma total: %.2f\n", soma);
+        printf("Media: %.2f\n", media);
+    } else {
+        printf("Nenhuma nota valida foi digitada.\n");
+    }
+
+    return 0;
+}
