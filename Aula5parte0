@@ -1,0 +1,50 @@
+Atividade1 
+#include <stdio.h>
+
+void mostrarMensagem(void) {
+    printf("Ola!\n");
+}
+
+int main(void) {
+    mostrarMensagem(); // chamada da função
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+void mostrarCabecalho(void) {
+    printf("====================\n");
+    printf("   SISTEMA CODING\n");
+    printf("====================\n");
+}
+
+int main(void) {
+    
+    mostrarCabecalho();
+    printf("Cadastrando aluno...\n\n");
+
+    mostrarCabecalho();
+    printf("Calculando media...\n\n");
+
+    mostrarCabecalho();
+    printf("Fim do programa.\n");
+
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+void mostrarMenu(void) {
+    printf("1 - Somar\n");
+    printf("2 - Subtrair\n");
+    printf("0 - Sair\n");
+}
+
+int main(void) {
+    mostrarMenu();
+    return 0;
+}
