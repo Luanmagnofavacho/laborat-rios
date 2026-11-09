@@ -1,0 +1,140 @@
+Atividade1 
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+    do {
+        printf("%d ", i);
+        i++;
+    } while (i <= 5);
+
+    printf("\nFim\n");
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        printf("\n--- MENU ---\n");
+        printf("1 - Somar 1 ate N\n");
+        printf("2 - Calcular media\n");
+        printf("0 - Sair\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                printf("Voce escolheu a opcao 1\n");
+                break;
+            case 2:
+                printf("Voce escolheu a opcao 2\n");
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opcao invalida!\n");
+        }
+
+    } while (opcao != 0);
+    // O menu aparece ao menos uma vez porque a condicao opcao != 0
+    // so e testada DEPOIS do bloco.
+
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        printf("\n--- MENU ---\n");
+        printf("1 - Somar 1 ate N\n");
+        printf("2 - Calcular media\n");
+        printf("0 - Sair\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                printf("Voce escolheu a opcao 1\n");
+                break;
+            case 2:
+                printf("Voce escolheu a opcao 2\n");
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opcao invalida!\n");
+        }
+
+    } while (opcao != 0);
+
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+
+int main() {
+    float nota;
+
+    do {
+        printf("Digite uma nota entre 0 e 10: ");
+        scanf("%f", &nota);
+
+        if (nota < 0 || nota > 10) {
+            printf("Nota invalida! Tente novamente.\n");
+        }
+
+    } while (nota < 0 || nota > 10);
+
+    printf("Nota valida registrada: %.2f\n", nota);
+    return 0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        printf("\n--- MENU DESAFIO ---\n");
+        printf("1 - Mostrar mensagem\n");
+        printf("2 - Mostrar seu nome\n");
+        printf("0 - Sair\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                printf("Ola! Voce esta indo bem na disciplina de C!\n");
+                break;
+            case 2:
+                printf("Meu nome e: Seu Nome Aqui\n"); // troque pelo seu nome
+                break;
+            case 0:
+                printf("Encerrando o programa...\n");
+                break;
+            default:
+                printf("Opcao invalida\n");
+        }
+
+    } while (opcao != 0);
+
+    return 0;
+}
