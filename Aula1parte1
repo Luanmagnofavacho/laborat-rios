@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+
+    printf("================================\n");
+    printf("       FICHA DO ESTUDANTE\n");
+    printf("================================\n");
+
+    printf("\n");
+
+    printf("Nome: Luan Magno Favacho\n");
+    printf("Curso: Analise e Desenvolvimento de Sistemas\n");
+    printf("Semestre: 1\n");
+    printf("Mensagem: Aprendendo programacao em C!\n");
+
+    printf("================================\n");
+
+    return 0;
+}
