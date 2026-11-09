@@ -1,0 +1,58 @@
+Atividade1
+
+Digite sua idade: 20
+Entrada permitida
+Fim do programa
+
+Atividade2
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(void) {
+    bool ativo = true;
+    bool bloqueado = false;
+
+    printf("ativo = %d\n", ativo);
+    printf("bloqueado = %d\n", bloqueado);
+
+    return 0;
+}
+
+Atividade3
+
+int x = 10;
+int y = 5;
+
+Atividade4
+
+int idade = 15;
+
+if (idade == 18) {
+    printf("Voce tem 18 anos\n");
+}
+
+Atividade5
+
+int idade = 15;
+
+if (idade = 18) {
+    printf("Voce tem 18 anos\n");
+}
+
+Atividade6
+
+#include <stdio.h>
+
+int main(void) {
+    int idade;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    if (idade >= 18) {
+        printf("Maior de idade\n");
+    }
+
+    return 0;
+}
