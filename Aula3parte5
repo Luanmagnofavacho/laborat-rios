@@ -1,0 +1,110 @@
+Atividade1 
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(void) {
+    int idade;
+    int senha;
+    int bloqueadoInt;
+    bool bloqueado;
+
+    printf("Idade: ");
+    scanf("%d", &idade);
+
+    printf("Senha numerica: ");
+    scanf("%d", &senha);
+
+    printf("Bloqueado? (1=sim, 0=nao): ");
+    scanf("%d", &bloqueadoInt);
+
+    bloqueado = bloqueadoInt != 0;
+
+    if (idade < 18 || senha != 1234 || bloqueado) {
+
+        printf("Acesso negado!\n");
+
+        if (idade < 18) {
+            printf("Motivo: idade insuficiente.\n");
+        }
+
+        if (senha != 1234) {
+            printf("Motivo: senha incorreta.\n");
+        }
+
+        if (bloqueado) {
+            printf("Motivo: usuario bloqueado.\n");
+        }
+
+    } else {
+        printf("Acesso permitido!\n");
+    }
+
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+int main(void) {
+
+    float horas;
+    float valorBase;
+    float desconto;
+    float valorFinal;
+    int tipoCliente;
+
+    printf("Digite as horas estacionadas: ");
+    scanf("%f", &horas);
+
+    printf("Tipo de cliente:\n");
+    printf("1 - Comum\n");
+    printf("2 - VIP\n");
+    printf("Escolha: ");
+    scanf("%d", &tipoCliente);
+
+    if (horas <= 0) {
+        printf("Erro: quantidade de horas invalida!\n");
+    }
+    else if (tipoCliente != 1 && tipoCliente != 2) {
+        printf("Erro: tipo de cliente invalido!\n");
+    }
+    else {
+
+        if (horas <= 1) {
+            valorBase = 5.0;
+        }
+        else if (horas <= 3) {
+            valorBase = 10.0;
+        }
+        else {
+            valorBase = 15.0;
+        }
+
+        if (tipoCliente == 2) {
+            desconto = valorBase * 0.20;
+        }
+        else {
+            desconto = 0.0;
+        }
+
+        valorFinal = valorBase - desconto;
+
+        printf("\n--- RESUMO DO ESTACIONAMENTO ---\n");
+
+        printf("Horas estacionadas: %.2f\n", horas);
+        printf("Valor base: R$ %.2f\n", valorBase);
+        printf("Desconto: R$ %.2f\n", desconto);
+        printf("Valor final: R$ %.2f\n", valorFinal);
+
+        if (tipoCliente == 2) {
+            printf("Cliente VIP\n");
+        }
+        else {
+            printf("Cliente comum\n");
+        }
+    }
+
+    return 0;
+}
