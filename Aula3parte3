@@ -1,0 +1,184 @@
+Atividade1 
+
+#include <stdio.h>
+
+int main(void) {
+    int opcao;
+
+    printf("1 - Cadastrar\n");
+    printf("2 - Consultar\n");
+    printf("3 - Sair\n");
+    printf("Opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1:
+            printf("Cadastrar\n");
+            break;
+
+        case 2:
+            printf("Consultar\n");
+            break;
+
+        case 3:
+            printf("Sair\n");
+            break;
+
+        default:
+            printf("Opcao invalida\n");
+    }
+
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+int main(void) {
+    int opcao = 1;
+
+    switch (opcao) {
+        case 1:
+            printf("Um\n");
+
+        case 2:
+            printf("Dois\n");
+    }
+
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+int main(void) {
+    int opcao = 1;
+
+    switch (opcao) {
+        case 1:
+            printf("Um\n");
+            break;
+
+        case 2:
+            printf("Dois\n");
+            break;
+    }
+
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+
+int main(void) {
+    float a, b, resultado;
+    int opcao;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &b);
+
+    printf("\n--- CALCULADORA ---\n");
+    printf("1 - Somar\n");
+    printf("2 - Subtrair\n");
+    printf("3 - Multiplicar\n");
+    printf("4 - Dividir\n");
+
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1:
+            resultado = a + b;
+            printf("Resultado: %.2f\n", resultado);
+            break;
+
+        case 2:
+            resultado = a - b;
+            printf("Resultado: %.2f\n", resultado);
+            break;
+
+        case 3:
+            resultado = a * b;
+            printf("Resultado: %.2f\n", resultado);
+            break;
+
+        case 4:
+            if (b != 0) {
+                resultado = a / b;
+                printf("Resultado: %.2f\n", resultado);
+            } else {
+                printf("Divisao por zero nao permitida\n");
+            }
+            break;
+
+        default:
+            printf("Opcao invalida\n");
+    }
+
+    return 0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+int main(void) {
+    int a, b, opcao;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &b);
+
+    printf("\n--- CALCULADORA ---\n");
+    printf("1 - Somar\n");
+    printf("2 - Subtrair\n");
+    printf("3 - Multiplicar\n");
+    printf("4 - Dividir\n");
+    printf("5 - Resto da divisao\n");
+
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1:
+            printf("Resultado: %d\n", a + b);
+            break;
+
+        case 2:
+            printf("Resultado: %d\n", a - b);
+            break;
+
+        case 3:
+            printf("Resultado: %d\n", a * b);
+            break;
+
+        case 4:
+            if (b != 0) {
+                printf("Resultado: %.2f\n", (float)a / b);
+            } else {
+                printf("Divisao por zero nao permitida\n");
+            }
+            break;
+
+        case 5:
+            if (b != 0) {
+                printf("Resto: %d\n", a % b);
+            } else {
+                printf("Nao e possivel calcular o resto com divisor zero\n");
+            }
+            break;
+
+        default:
+            printf("Opcao invalida\n");
+    }
+
+    return 0;
+}
