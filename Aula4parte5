@@ -1,0 +1,175 @@
+Atividade1 
+
+#include <stdio.h>
+
+int main() {
+    int quantidade;
+    float nota;
+    float soma = 0;
+
+    printf("Quantidade de notas: ");
+    scanf("%d", &quantidade);
+
+    for (int i = 1; i <= quantidade; i++) {
+        printf("Nota %d: ", i);
+        scanf("%f", &nota);
+        soma += nota; // acumulador
+    }
+
+    if (quantidade > 0) {
+        printf("Media: %.2f\n", soma / quantidade);
+    } else {
+        printf("Quantidade invalida.\n");
+    }
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+    int positivos = 0, negativos = 0, zeros = 0;
+    int soma = 0;
+    int maior, menor;
+
+    printf("Digite 10 numeros:\n");
+    for (int i = 1; i <= 10; i++) {
+        printf("Numero %d: ", i);
+        scanf("%d", &numero);
+
+        if (i == 1) { // inicializa maior/menor com o primeiro
+            maior = numero;
+            menor = numero;
+        }
+
+        if (numero > 0) positivos++;
+        else if (numero < 0) negativos++;
+        else zeros++;
+
+        soma += numero;
+
+        if (numero > maior) maior = numero;
+        if (numero < menor) menor = numero;
+    }
+
+    printf("\n--- RESULTADO ---\n");
+    printf("Positivos: %d\n", positivos);
+    printf("Negativos: %d\n", negativos);
+    printf("Zeros: %d\n", zeros);
+    printf("Soma total: %d\n", soma);
+    printf("Maior valor: %d\n", maior);
+    printf("Menor valor: %d\n", menor);
+
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+int main() {
+    int valor;
+    printf("Digite o valor para saque: ");
+    scanf("%d", &valor);
+
+    int resto = valor;
+
+    int notas100 = resto / 100;
+    resto = resto % 100;
+
+    int notas50 = resto / 50;
+    resto = resto % 50;
+
+    int notas20 = resto / 20;
+    resto = resto % 20;
+
+    int notas10 = resto / 10;
+    resto = resto % 10;
+
+    int notas5 = resto / 5;
+    resto = resto % 5;
+
+    int notas2 = resto / 2;
+    resto = resto % 2;
+
+    int notas1 = resto;
+
+    printf("\nValor: %d\n", valor);
+    printf("Notas de 100: %d\n", notas100);
+    printf("Notas de 50: %d\n", notas50);
+    printf("Notas de 20: %d\n", notas20);
+    printf("Notas de 10: %d\n", notas10);
+    printf("Notas de 5: %d\n", notas5);
+    printf("Notas de 2: %d\n", notas2);
+    printf("Notas de 1: %d\n", notas1);
+
+    // Resposta da pergunta do roteiro:
+    // Sim, quando aprendermos arrays/vetores, poderemos guardar
+    // {100,50,20,10,5,2,1} em uma coleção e percorrer com um for,
+    // evitando repetir o mesmo código 7 vezes.
+
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        printf("\n=====================\n");
+        printf("    MENU PRINCIPAL\n");
+        printf("=====================\n");
+        printf("1 - Somar dois numeros\n");
+        printf("2 - Calcular media\n");
+        printf("3 - Tabuada\n");
+        printf("0 - Sair\n");
+        printf("=====================\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1: {
+                float a, b;
+                printf("Digite dois numeros: ");
+                scanf("%f %f", &a, &b);
+                printf("Soma = %.2f\n", a + b);
+                break;
+            }
+            case 2: {
+                int qtd;
+                float nota, soma = 0;
+                printf("Quantidade de notas: ");
+                scanf("%d", &qtd);
+                for (int i = 1; i <= qtd; i++) {
+                    printf("Nota %d: ", i);
+                    scanf("%f", &nota);
+                    soma += nota;
+                }
+                if (qtd > 0) printf("Media = %.2f\n", soma / qtd);
+                break;
+            }
+            case 3: {
+                int n;
+                printf("Qual tabuada? ");
+                scanf("%d", &n);
+                for (int i = 1; i <= 10; i++) {
+                    printf("%d x %d = %d\n", n, i, n * i);
+                }
+                break;
+            }
+            case 0:
+                printf("Encerrando...\n");
+                break;
+            default:
+                printf("Opcao invalida\n");
+        }
+
+    } while (opcao != 0);
+
+    return 0;
+}
