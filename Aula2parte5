@@ -1,0 +1,85 @@
+// Desafio1 //
+#include <stdio.h>
+
+int main() {
+    double celsius;
+    double fahrenheit;
+
+    printf("Digite a temperatura em Celsius: ");
+    scanf("%lf", &celsius);
+
+    fahrenheit = celsius * 9.0 / 5.0 + 32.0;
+
+    printf("%.2f C = %.2f F\n", celsius, fahrenheit);
+
+    return 0;
+}
+
+// Desafio2 //
+
+#include <stdio.h>
+
+int main() {
+    const double PI = 3.1415926535;
+    double raio;
+    double area;
+
+    printf("Digite o raio do circulo: ");
+    scanf("%lf", &raio);
+
+    area = PI * raio * raio;
+
+    printf("Area: %.2f\n", area);
+
+    return 0;
+}
+
+//Desafio3//
+
+#include <stdio.h>
+
+int main() {
+    double peso;
+    double altura;
+    double imc;
+
+    printf("Digite seu peso: ");
+    scanf("%lf", &peso);
+
+    printf("Digite sua altura: ");
+    scanf("%lf", &altura);
+
+    imc = peso / (altura * altura);
+
+    printf("IMC: %.2f\n", imc);
+
+    return 0;
+}
+
+//Desafio4//
+
+#include <stdio.h>
+
+int main() {
+    int total;
+    int horas;
+    int minutos;
+    int segundos;
+    int resto;
+
+    printf("Digite a quantidade de segundos: ");
+    scanf("%d", &total);
+
+    horas = total / 3600;
+
+    resto = total % 3600;
+
+    minutos = resto / 60;
+
+    segundos = resto % 60;
+
+    printf("%d hora(s), %d minuto(s), %d segundo(s)\n",
+           horas, minutos, segundos);
+
+    return 0;
+}
