@@ -1,0 +1,144 @@
+Atividade1 
+
+#include <stdio.h>
+
+int main() {
+    int idade;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    if (idade >= 18 && idade <= 65) {
+        printf("Faixa etaria permitida\n");
+    } else {
+        printf("Faixa etaria nao permitida\n");
+    }
+
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int dia;
+    bool bloqueado;
+
+    printf("Digite o dia da semana (1 a 7): ");
+    scanf("%d", &dia);
+
+    if (dia == 6 || dia == 7) {
+        printf("Fim de semana\n");
+    } else {
+        printf("Dia util\n");
+    }
+
+    bloqueado = false;
+
+    if (!bloqueado) {
+        printf("Acesso permitido\n");
+    } else {
+        printf("Acesso bloqueado\n");
+    }
+
+    return 0;
+}
+
+Atividade3
+
+if (media >= 7.0f && frequencia >= 75.0f) {
+    printf("Aprovado\n");
+} else {
+    printf("Reprovado\n");
+}
+
+Atividade4
+
+if (idade >= 18 && ativo == 1 || admin == 1) {
+    printf("Acesso permitido\n");
+}
+
+Atividade5
+
+#include <stdio.h>
+
+int main() {
+    int x;
+
+    printf("Digite um numero: ");
+    scanf("%d", &x);
+
+    if (x != 0 && 10 / x > 2) {
+        printf("Condicao verdadeira\n");
+    } else {
+        printf("Condicao falsa\n");
+    }
+
+    return 0;
+}
+
+Atividade6
+
+#include <stdio.h>
+
+int main() {
+    int usuarioValido = 1;
+    int senhaCorreta = 0;
+
+    if (usuarioValido) {
+        if (senhaCorreta) {
+            printf("Login realizado\n");
+        } else {
+            printf("Senha incorreta\n");
+        }
+    } else {
+        printf("Usuario inexistente\n");
+    }
+
+    return 0;
+}
+
+Atividade7
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    printf("Digite tres numeros: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a >= b && a >= c) {
+        printf("A e o maior\n");
+    } else if (b >= a && b >= c) {
+        printf("B e o maior\n");
+    } else {
+        printf("C e o maior\n");
+    }
+
+    return 0;
+}
+
+Atividade8
+
+#include <stdio.h>
+
+int main() {
+    int ano;
+
+    printf("Digite um ano: ");
+    scanf("%d", &ano);
+
+    if ((ano % 400 == 0) ||
+        (ano % 4 == 0 && ano % 100 != 0)) {
+
+        printf("Ano bissexto\n");
+
+    } else {
+        printf("Nao e bissexto\n");
+    }
+
+    return 0;
+}
