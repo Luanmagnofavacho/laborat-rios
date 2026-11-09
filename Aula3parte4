@@ -1,0 +1,159 @@
+Atividade1 
+
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    if (numero % 2 == 0) {
+        printf("Par\n");
+    } else {
+        printf("Impar\n");
+    }
+
+    return 0;
+}
+
+
+Atividade2
+
+
+#include <stdio.h>
+
+int main() {
+    float nota;
+
+    printf("Digite sua nota: ");
+    scanf("%f", &nota);
+
+    if (nota >= 9.0f) {
+        printf("Excelente\n");
+    } else if (nota >= 7.0f) {
+        printf("Bom\n");
+    } else if (nota >= 5.0f) {
+        printf("Regular\n");
+    } else {
+        printf("Insuficiente\n");
+    }
+
+    return 0;
+}
+
+Atividade3
+
+
+#include <stdio.h>
+
+int main() {
+    float media, frequencia;
+
+    printf("Digite sua media: ");
+    scanf("%f", &media);
+
+    printf("Digite sua frequencia (%%): ");
+    scanf("%f", &frequencia);
+
+    if (media >= 7.0f && frequencia >= 75.0f) {
+        printf("Aprovado\n");
+    } else {
+        printf("Reprovado\n");
+    }
+
+    return 0;
+}
+
+
+Atividade4
+
+
+#include <stdio.h>
+
+int main() {
+    float media, frequencia;
+
+    printf("Digite sua media: ");
+    scanf("%f", &media);
+
+    printf("Digite sua frequencia (%%): ");
+    scanf("%f", &frequencia);
+
+    if (media >= 7.0f && frequencia >= 75.0f) {
+        printf("Aprovado\n");
+    } else if (media < 7.0f && frequencia < 75.0f) {
+        printf("Reprovado por nota e frequencia\n");
+    } else if (media < 7.0f) {
+        printf("Reprovado por nota\n");
+    } else {
+        printf("Reprovado por frequencia\n");
+    }
+
+    return 0;
+}
+
+
+Atividade5
+
+
+#include <stdio.h>
+
+int main() {
+    double peso;
+    double altura;
+    double imc;
+
+    printf("Digite seu peso: ");
+    scanf("%lf", &peso);
+
+    printf("Digite sua altura: ");
+    scanf("%lf", &altura);
+
+    imc = peso / (altura * altura);
+
+    printf("IMC: %.2f\n", imc);
+
+    if (imc < 18.5) {
+        printf("Abaixo do peso\n");
+    } else if (imc < 25.0) {
+        printf("Peso adequado\n");
+    } else if (imc < 30.0) {
+        printf("Sobrepeso\n");
+    } else {
+        printf("Obesidade\n");
+    }
+
+    return 0;
+}
+
+
+Atividade6
+
+#include <stdio.h>
+
+int main() {
+    double valor;
+    double desconto;
+    double valorFinal;
+
+    printf("Digite o valor da compra: R$ ");
+    scanf("%lf", &valor);
+
+    if (valor >= 500.0) {
+        desconto = valor * 0.10;
+    } else if (valor >= 200.0) {
+        desconto = valor * 0.05;
+    } else {
+        desconto = 0.0;
+    }
+
+    valorFinal = valor - desconto;
+
+    printf("\nValor original: R$ %.2f\n", valor);
+    printf("Desconto: R$ %.2f\n", desconto);
+    printf("Valor final: R$ %.2f\n", valorFinal);
+
+    return 0;
+}
