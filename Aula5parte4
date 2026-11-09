@@ -1,0 +1,119 @@
+Atividade1 
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool ehPar(int numero) {
+    return numero % 2 == 0;
+}
+
+int main(void) {
+    int testes[] = {2, 7, 0, -4};
+    for (int i = 0; i < 4; i++) {
+        if (ehPar(testes[i])) {
+            printf("%d: Par\n", testes[i]);
+        } else {
+            printf("%d: Impar\n", testes[i]);
+        }
+    }
+    return 0;
+}
+
+Atividade2
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool podeEntrar(int idade, bool bloqueado, bool temIngresso) {
+    return idade >= 18 && !bloqueado && temIngresso;
+}
+
+int main(void) {
+    int idade;
+    int bloqueadoInt, ingressoInt;
+    
+    printf("Idade: ");
+    scanf("%d", &idade);
+    printf("Bloqueado? (1=sim 0=nao): ");
+    scanf("%d", &bloqueadoInt);
+    printf("Tem ingresso? (1=sim 0=nao): ");
+    scanf("%d", &ingressoInt);
+
+    if (podeEntrar(idade, bloqueadoInt, ingressoInt)) {
+        printf("Entrada liberada\n");
+    } else {
+        printf("Entrada negada\n");
+    }
+    return 0;
+}
+
+Atividade3
+
+#include <stdio.h>
+
+double calcularQuadrado(double x) {
+    return x * x;
+}
+
+double calcularAreaCirculo(double raio) {
+    const double PI = 3.1415926535;
+    return PI * calcularQuadrado(raio);
+}
+
+int main(void) {
+    double raio;
+    printf("Raio: ");
+    scanf("%lf", &raio);
+    printf("Area: %.2f\n", calcularAreaCirculo(raio));
+    return 0;
+}
+
+Atividade4
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool notaValida(double nota) {
+    if (nota < 0 || nota > 10) {
+        return false;
+    }
+    return true;
+}
+
+int maior(int a, int b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
+}
+
+int main(void) {
+    printf("%d\n", maior(5, 10));
+    printf("%d\n", (int)notaValida(11));
+    return 0;
+}
+
+Atividade5
+
+#include <stdio.h>
+
+double lerNotaValida(void) {
+    double nota;
+    do {
+        printf("Digite uma nota entre 0 e 10: ");
+        scanf("%lf", &nota);
+    } while (nota < 0 || nota > 10);
+    return nota;
+}
+
+double calcularMedia(double n1, double n2, double n3) {
+    return (n1 + n2 + n3) / 3.0;
+}
+
+int main(void) {
+    double n1 = lerNotaValida();
+    double n2 = lerNotaValida();
+    double n3 = lerNotaValida();
+    printf("Media: %.2f\n", calcularMedia(n1, n2, n3));
+    return 0;
+}
