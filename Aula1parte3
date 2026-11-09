@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+
+int main() {
+
+    printf("===============================\n");
+    printf("          PERFIL DO DEV        \n");
+    printf("===============================\n");
+
+    printf("Nome: Luan Magno\n");
+    printf("Curso: Analise e Desenvolvimento de Sistemas\n");
+    printf("Semestre: 1\n");
+    printf("Linguagem anterior: Nenhuma\n");
+    printf("Linguagem atual: C\n");
+    printf("Idade: 22\n");
+
+    printf("===============================\n");
+
+    return 0;
+}
