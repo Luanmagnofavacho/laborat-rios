@@ -1,0 +1,60 @@
+// minedesafio //
+
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 3;
+
+    float resultado = (float)a / b;
+
+    printf("Resultado: %f\n", resultado);
+
+    return 0;
+}
+
+// minedesafio2 //
+
+#include <stdio.h>
+
+int main() {
+    int resultado1 = (2 + 3) * 4;
+    int resultado2 = 2 + 3 * 4;
+
+    printf("Primeiro resultado: %d\n", resultado1);
+    printf("Segundo resultado: %d\n", resultado2);
+
+    return 0;
+}
+
+// minedesafio3 //
+
+
+#include <stdio.h>
+
+int main() {
+    int contador = 0;
+
+    contador++;
+    contador++;
+    contador++;
+
+    printf("Contador final: %d\n", contador);
+
+    return 0;
+}
+
+// Minedesafio4//
+
+#include <stdio.h>
+
+int main() {
+    double valor = 8.75;
+
+    int numero = valor;
+
+    printf("Valor original: %.2lf\n", valor);
+    printf("Valor convertido: %d\n", numero);
+
+    return 0;
+}
