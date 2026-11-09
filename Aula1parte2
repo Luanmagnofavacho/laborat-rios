@@ -1,0 +1,43 @@
+// Desafio1 //
+
+#include <stdio.h>
+
+int main() {
+
+    printf("***********************\n");
+    printf("*     CODING - 2026     *\n");
+    printf("***********************\n");
+
+    return 0;
+}
+
+// Desafio2 //
+
+#include <stdio.h>
+
+int main() {
+
+    printf("Nome: Luan\n");
+    printf("Curso: Analise e Desenvolvimento de Sistemas\n");
+    printf("Cidade: Belem\n");
+
+    return 0;
+}
+
+// Desafio3 //
+
+#include <stdio.h>
+
+int main() {
+
+    printf("=======================\n");
+    printf("     SISTEMA CODING\n");
+    printf("=======================\n");
+    printf("1 - Cadastrar\n");
+    printf("2 - Consultar\n");
+    printf("3 - Sair\n");
+    printf("=======================\n");
+    printf("Escolha uma opcao: ");
+
+    return 0;
+}
